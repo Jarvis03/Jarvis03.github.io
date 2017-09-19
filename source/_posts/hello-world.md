@@ -8,5 +8,5 @@ Welcome to Jarvis03`s blog
 ### this is a test
 
 ``` bash
-$ hexo new "马蜂"
+$ hexo new "This is a new world"
 ```
