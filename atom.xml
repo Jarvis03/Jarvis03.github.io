@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>初心者</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://github.com/Jarvis03/"/>
+  <updated>2019-06-08T12:58:23.009Z</updated>
+  <id>https://github.com/Jarvis03/</id>
+  
+  <author>
+    <name>xuan</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>提高效率的工具推荐</title>
+    <link href="https://github.com/Jarvis03/2019/06/08/%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87%E7%9A%84%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/"/>
+    <id>https://github.com/Jarvis03/2019/06/08/提高效率的工具推荐/</id>
+    <published>2019-06-08T12:56:50.000Z</published>
+    <updated>2019-06-08T12:58:23.009Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Tool-Recommendation&quot;&gt;&lt;a href=&quot;#Tool-Recommendation&quot; class=&quot;headerlink&quot; title=&quot;Tool Recommendation&quot;&gt;&lt;/a&gt;Tool Recommendation&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="tool" scheme="https://github.com/Jarvis03/tags/tool/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git</title>
+    <link href="https://github.com/Jarvis03/2019/06/08/git/"/>
+    <id>https://github.com/Jarvis03/2019/06/08/git/</id>
+    <published>2019-06-08T12:43:09.000Z</published>
+    <updated>2019-06-08T12:43:32.099Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Git&quot;&gt;&lt;a href=&quot;#Git&quot; class=&quot;headerlink&quot; title=&quot;Git&quot;&gt;&lt;/a&gt;Git&lt;/h1&gt;&lt;h2 id=&quot;Windows-install&quot;&gt;&lt;a href=&quot;#Windows-install&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="git" scheme="https://github.com/Jarvis03/tags/git/"/>
+    
+  </entry>
+  
+</feed>

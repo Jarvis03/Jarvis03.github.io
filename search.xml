@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[提高效率的工具推荐]]></title>
+    <url>%2F2019%2F06%2F08%2F%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87%E7%9A%84%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90%2F</url>
+    <content type="text"><![CDATA[Tool Recommendation良心小工具1. RolanRolan是一个轻量级启动器，如果你已经厌恶了满屏的图标，可以试试它。界面如下图 它有两种操作模式 普通模式：如上图，可以把图标直接拖入，点击可以启动 命令模式：直接输入命令可启动应用。 Rolan支持分组，可以将图标分类。 体积小，轻装上阵 戳-&gt;Rolan。 2. EverythingEverything是voidtools开发的一款文件搜索工具，官网描述为基于名称实时定位文件和目录（Locate files and folders by name instantly）。 体积小 搜索快 界面简洁 戳-&gt;Everything 3. BandzipBandizip 是一款来自韩国的免费优秀的文件压缩/解压缩软件,支持Win与Mac，其操作方式几乎跟 WinRAR 一致，支持rar、zip、7z等众多主流格式，且完美支持 XP～Win10及64位操作系统. 如图，Bandizip 的界面非常简洁干净，布局和 WinRAR 基本一致 体积小 快速预览压缩包的图片 支持压缩和解压缩格式多 戳-&gt;Bandzip 4.CloverClover的功能就是给资源管理器加上Chrome一样的标签页。 Clover只有这么一个功能，但是做的惟妙惟肖。Clover 把 Chrome 标签页有的样式、功能、右键菜单、快捷键全部移植，Chrome 控瞬间上手。经常访问的Path可以做成书签，快速定位，提高效率。 戳-&gt;Clover 原文链接]]></content>
+      <tags>
+        <tag>tool</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[git]]></title>
+    <url>%2F2019%2F06%2F08%2Fgit%2F</url>
+    <content type="text"><![CDATA[GitWindows install网上自行搜索安装git客户端 安装完成后还需要最后一步设置，在命令行输入： $ git config --global user.name &quot;Your Name&quot; $ git config --global user.email &quot;Your Email&quot;1. 先有本地仓库,后有远程库详细内容参看： 廖雪峰Git教程-添加远程库 创建版本库在一个合适的目录执行以下命令： $ git init将在这个目录创建一个空的仓库（empty Git repository），该目录下会多一个.git的文件夹。 文件添加到仓库第一步：在工目录下添加一个文件（如readme.txt）用命令git add 告诉git，添加到仓库： $ git add readme.txt第二步：将文件提交到仓库： $ git commit -m &quot;wrote a readme file&quot; [master (root-commit) cb926e7] wrote a readme file 1 file changed, 2 insertions(+) create mode 100644 readme.txt关联远程仓库github创建仓库 登录github，然后在右上角找到&quot;Create a new repository&quot;按钮，创建一个新的仓库。Repository name填入git_test， 然后点击&quot;Create repository&quot;按钮就可以创建了新的git仓库。 远程仓库与本地仓库关联$ git remote add origin git@github.com:YourGithubName/git_test.git推送到远程库$ git push -u origin master由于远程库是空的，第一次推送的master分支时加上了 -u 的参数，Git不但会把本地的master分支内容推送到远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送和拉取就可以简化命令。 2. 先有远程库创建远程库，详细内容参看： 廖雪峰Git教程-从远程库克隆 在Github创建仓库后，下一步就需要 clone 克隆一个本地库： $ git clone git@github.com:YourGithubName/git_test.git 关联远程库 ssh秘钥问题你也许还注意到，GitHub给出的地址不止一个，还可以用https://github.com/michaelliao/gitskills.git 这样的地址。实际上，Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。 使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。 使用ssh协议 git命令创建SSH Key方法参见： 廖雪峰Git教程-远程库 $ ssh-keygen -t rsa -C &quot;youremail@example.com&quot; TortoiseGit 创建Key 在windows程序中，找到TortoiseGit下的Puttygen并打开使用puttygen可以生成TortoiseGit使用的秘钥（**.ppk）,如果已经使用git生成了ssh的key，这一步需要加载 ssh的私钥，最后点击保存私钥即可。 使用已经保存的私钥，可以免去每次操作输入密码的问题 在gitLab（或者github）添加公钥，这是远程仓库认证客户端的一个凭证参见： 廖雪峰Git教程-远程库 Git Command除了以上提到的git命令外，介绍下其他常用命令 修改 git status: 查看状态 git log: 查看历史记录 git reset: 版本退回 Git 内部有一个指向当前版本的HEAD指针。HEAD指向那个版本号，就把当前版本定位到那。所以用$ git reset --head HEAD(指针)来回退版本或者回复版本。 git reflog: HEAD版本号可以用命令git reflog查看。 $ git reflog ea34578 HEAD@{0}: reset: moving to HEAD^ 3628164 HEAD@{1}: commit: append GPL ea34578 HEAD@{2}: commit: add distributed cb926e7 HEAD@{3}: commit (initial): wrote a readme file git diff HEAD -- file: 查看工作区与版本库里面最新版本的区别。如git diff HEAD -- readme.txt $ git diff HEAD -- readme.txt diff --git a/readme.txt b/readme.txt index 76d770f..a9c5755 100644 --- a/readme.txt +++ b/readme.txt @@ -1,4 +1,4 @@ Git is a distributed version control system. Git is free software distributed under the GPL. Git has a mutable index called stage. -Git tracks changes. +Git tracks changes of files git checkout -- file: 文件在工作区的修改全部撤销 git rm: 版本库中删除文件 分支管理…]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+</search>
