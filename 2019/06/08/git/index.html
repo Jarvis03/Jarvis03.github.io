@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="git,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="GitWindows install网上自行搜索安装git客户端 安装完成后还需要最后一步设置，在命令行输入： $ git config --global user.name  &amp;quot;Your Name&amp;quot; $ git config --global user.email &amp;quot;Your Email&amp;quot;1. 先有本地仓库,后有远程库详细内容参看： 廖雪峰Git教程-添加">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git">
+<meta property="og:url" content="https://github.com/Jarvis03/2019/06/08/git/index.html">
+<meta property="og:site_name" content="初心者">
+<meta property="og:description" content="GitWindows install网上自行搜索安装git客户端 安装完成后还需要最后一步设置，在命令行输入： $ git config --global user.name  &amp;quot;Your Name&amp;quot; $ git config --global user.email &amp;quot;Your Email&amp;quot;1. 先有本地仓库,后有远程库详细内容参看： 廖雪峰Git教程-添加">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://github.com/Jarvis03/git/blob/master/file/key2.png">
+<meta property="og:image" content="https://github.com/Jarvis03/git/blob/master/file/key.png">
+<meta property="og:image" content="https://github.com/Jarvis03/git/blob/master/file/gitlab.png">
+<meta property="og:updated_time" content="2019-06-08T12:43:32.099Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git">
+<meta name="twitter:description" content="GitWindows install网上自行搜索安装git客户端 安装完成后还需要最后一步设置，在命令行输入： $ git config --global user.name  &amp;quot;Your Name&amp;quot; $ git config --global user.email &amp;quot;Your Email&amp;quot;1. 先有本地仓库,后有远程库详细内容参看： 廖雪峰Git教程-添加">
+<meta name="twitter:image" content="https://github.com/Jarvis03/git/blob/master/file/key2.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://github.com/Jarvis03/2019/06/08/git/">
+
+
+
+
+
+  <title>git | 初心者</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">初心者</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/Jarvis03/2019/06/08/git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xuan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="初心者">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">git</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-08T20:43:09+08:00">
+                2019-06-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="Windows-install"><a href="#Windows-install" class="headerlink" title="Windows install"></a>Windows install</h2><p>网上自行搜索安装git客户端</p>
+<p>安装完成后还需要最后一步设置，在命令行输入：</p>
+<pre><code>$ git config --global user.name  &quot;Your Name&quot;
+$ git config --global user.email &quot;Your Email&quot;</code></pre><h2 id="1-先有本地仓库-后有远程库"><a href="#1-先有本地仓库-后有远程库" class="headerlink" title="1. 先有本地仓库,后有远程库"></a>1. 先有本地仓库,后有远程库</h2><p>详细内容参看： <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013752340242354807e192f02a44359908df8a5643103a000" target="_blank" rel="noopener">廖雪峰Git教程-添加远程库</a></p>
+<h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><p>在一个合适的目录执行以下命令：</p>
+<pre><code>$ git init</code></pre><p>将在这个目录创建一个空的仓库（empty Git repository），该目录下会多一个.git的文件夹。</p>
+<h2 id="文件添加到仓库"><a href="#文件添加到仓库" class="headerlink" title="文件添加到仓库"></a>文件添加到仓库</h2><h3 id="第一步："><a href="#第一步：" class="headerlink" title="第一步："></a>第一步：</h3><p>在工目录下添加一个文件（如readme.txt）用命令git add 告诉git，添加到仓库：</p>
+<pre><code>$ git add readme.txt</code></pre><h3 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h3><p>将文件提交到仓库：</p>
+<pre><code>$ git commit -m &quot;wrote a readme file&quot;
+[master (root-commit) cb926e7] wrote a readme file
+1 file changed, 2 insertions(+)
+create mode 100644 readme.txt</code></pre><h2 id="关联远程仓库"><a href="#关联远程仓库" class="headerlink" title="关联远程仓库"></a>关联远程仓库</h2><h3 id="github创建仓库"><a href="#github创建仓库" class="headerlink" title="github创建仓库"></a>github创建仓库</h3><p> 登录<strong>github</strong>，然后在右上角找到<code>&quot;Create a new repository&quot;</code>按钮，创建一个新的仓库。<code>Repository name</code>填入<code>git_test</code>，
+ 然后点击<code>&quot;Create repository&quot;</code>按钮就可以创建了新的git仓库。</p>
+<h3 id="远程仓库与本地仓库关联"><a href="#远程仓库与本地仓库关联" class="headerlink" title="远程仓库与本地仓库关联"></a>远程仓库与本地仓库关联</h3><pre><code>$ git remote add origin git@github.com:YourGithubName/git_test.git</code></pre><h3 id="推送到远程库"><a href="#推送到远程库" class="headerlink" title="推送到远程库"></a>推送到远程库</h3><pre><code>$ git push -u origin master</code></pre><p>由于远程库是空的，第一次推送的master分支时加上了 -u 的参数，Git不但会把本地的master分支内容推送到远程新的master分支，<br>还会把本地的master分支和远程的master分支关联起来，在以后的推送和拉取就可以简化命令。</p>
+<h2 id="2-先有远程库"><a href="#2-先有远程库" class="headerlink" title="2. 先有远程库"></a>2. 先有远程库</h2><p>创建远程库，详细内容参看： <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001375233990231ac8cf32ef1b24887a5209f83e01cb94b000" target="_blank" rel="noopener">廖雪峰Git教程-从远程库克隆</a></p>
+<p>在Github创建仓库后，下一步就需要 <code>clone</code> 克隆一个本地库：</p>
+<p><code>$ git clone git@github.com:YourGithubName/git_test.git</code></p>
+<h2 id="关联远程库-ssh秘钥问题"><a href="#关联远程库-ssh秘钥问题" class="headerlink" title="关联远程库 ssh秘钥问题"></a>关联远程库 ssh秘钥问题</h2><p>你也许还注意到，GitHub给出的地址不止一个，还可以用<a href="https://github.com/michaelliao/gitskills.git">https://github.com/michaelliao/gitskills.git</a> 这样的地址。实际上，Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。</p>
+<p>使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。</p>
+<h4 id="使用ssh协议"><a href="#使用ssh协议" class="headerlink" title="使用ssh协议"></a>使用ssh协议</h4><ol>
+<li><p>git命令创建SSH Key<br>方法参见： <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374385852170d9c7adf13c30429b9660d0eb689dd43a000" target="_blank" rel="noopener">廖雪峰Git教程-远程库</a></p>
+<p> <code>$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code></p>
+</li>
+<li><p>TortoiseGit 创建Key</p>
+</li>
+</ol>
+<p>在windows程序中，找到TortoiseGit下的Puttygen并打开<br>使用puttygen可以生成TortoiseGit使用的秘钥（**.ppk）,如果已经使用git生成了ssh的key，这一步需要加载 ssh的私钥，最后点击保存私钥即可。</p>
+<p><img src="https://github.com/Jarvis03/git/blob/master/file/key2.png" alt="创建key"></p>
+<p>使用已经保存的私钥，可以免去每次操作输入密码的问题</p>
+<p><img src="https://github.com/Jarvis03/git/blob/master/file/key.png" alt="使用key"></p>
+<p>在gitLab（或者github）添加公钥，这是远程仓库认证客户端的一个凭证<br>参见： <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374385852170d9c7adf13c30429b9660d0eb689dd43a000" target="_blank" rel="noopener">廖雪峰Git教程-远程库</a></p>
+<p><img src="https://github.com/Jarvis03/git/blob/master/file/gitlab.png" alt="使用key"></p>
+<h2 id="Git-Command"><a href="#Git-Command" class="headerlink" title="Git Command"></a>Git Command</h2><p>除了以上提到的git命令外，介绍下其他常用命令</p>
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><ul>
+<li><p><code>git status</code>: 查看状态</p>
+</li>
+<li><p><code>git log</code>: 查看历史记录</p>
+</li>
+<li><p><code>git reset</code>: 版本退回   Git 内部有一个指向当前版本的<strong>HEAD</strong>指针。<strong>HEAD</strong>指向那个版本号，<br>就把当前版本定位到那。所以用<code>$ git reset --head HEAD(指针)</code>来回退版本或者回复版本。</p>
+</li>
+<li><p><code>git reflog</code>: <code>HEAD</code>版本号可以用命令<code>git reflog</code>查看。</p>
+<pre><code>$ git reflog
+ea34578 HEAD@{0}: reset: moving to HEAD^
+3628164 HEAD@{1}: commit: append GPL
+ea34578 HEAD@{2}: commit: add distributed
+cb926e7 HEAD@{3}: commit (initial): wrote a readme file</code></pre></li>
+<li><p><code>git diff HEAD -- file</code>: 查看工作区与版本库里面最新版本的区别。如<code>git diff HEAD -- readme.txt</code></p>
+<pre><code>$ git diff HEAD -- readme.txt 
+diff --git a/readme.txt b/readme.txt
+index 76d770f..a9c5755 100644
+--- a/readme.txt
++++ b/readme.txt
+@@ -1,4 +1,4 @@
+ Git is a distributed version control system.
+ Git is free software distributed under the GPL.
+ Git has a mutable index called stage.
+-Git tracks changes.
++Git tracks changes of files</code></pre></li>
+<li><p><code>git checkout -- file</code>: 文件在工作区的修改全部撤销  </p>
+</li>
+<li><p><code>git rm</code>: 版本库中删除文件 </p>
+</li>
+</ul>
+<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><p>…</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    xuan
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="https://github.com/Jarvis03/2019/06/08/git/" title="git">https://github.com/Jarvis03/2019/06/08/git/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://github.com/Jarvis03/Jarvis03.github.io.git" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/08/chris/" rel="next" title="chris">
+                <i class="fa fa-chevron-left"></i> chris
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/head.jpg" alt="xuan">
+            
+              <p class="site-author-name" itemprop="name">xuan</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Jarvis03" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Git"><span class="nav-number">1.</span> <span class="nav-text">Git</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows-install"><span class="nav-number">1.1.</span> <span class="nav-text">Windows install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-先有本地仓库-后有远程库"><span class="nav-number">1.2.</span> <span class="nav-text">1. 先有本地仓库,后有远程库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建版本库"><span class="nav-number">1.3.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件添加到仓库"><span class="nav-number">1.4.</span> <span class="nav-text">文件添加到仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一步："><span class="nav-number">1.4.1.</span> <span class="nav-text">第一步：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步："><span class="nav-number">1.4.2.</span> <span class="nav-text">第二步：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关联远程仓库"><span class="nav-number">1.5.</span> <span class="nav-text">关联远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#github创建仓库"><span class="nav-number">1.5.1.</span> <span class="nav-text">github创建仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程仓库与本地仓库关联"><span class="nav-number">1.5.2.</span> <span class="nav-text">远程仓库与本地仓库关联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推送到远程库"><span class="nav-number">1.5.3.</span> <span class="nav-text">推送到远程库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-先有远程库"><span class="nav-number">1.6.</span> <span class="nav-text">2. 先有远程库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关联远程库-ssh秘钥问题"><span class="nav-number">1.7.</span> <span class="nav-text">关联远程库 ssh秘钥问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用ssh协议"><span class="nav-number">1.7.0.1.</span> <span class="nav-text">使用ssh协议</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-Command"><span class="nav-number">1.8.</span> <span class="nav-text">Git Command</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改"><span class="nav-number">1.8.1.</span> <span class="nav-text">修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理"><span class="nav-number">1.8.2.</span> <span class="nav-text">分支管理</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xuan</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
